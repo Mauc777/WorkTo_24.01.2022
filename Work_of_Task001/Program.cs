@@ -26,3 +26,28 @@ string[] Selection(string[] ArrayStrings)
     }
     return (ArrayFinite);
 }
+
+void WriteArray(string[] ArrayStrings, string[] ArrayFinite)
+
+{
+    Console.Write("[");
+    for (int i = 0; i < ArrayStrings.Length; i++)
+    {
+        Console.Write(ArrayStrings[i]);
+        if (i != ArrayStrings.Length - 1)
+        {
+            Console.Write(", ");
+        }
+    }
+    Console.Write("] -> [");
+    for (int i = 0; i < ArrayFinite.Length; i++)
+    {
+        Console.Write(ArrayFinite[i]);
+        if (i != ArrayFinite.Length - 1)
+        {
+            Console.Write(", ");
+        }
+    }
+    Console.WriteLine("]");
+}
+WriteArray(ArrayStrings, Selection(ArrayStrings));
